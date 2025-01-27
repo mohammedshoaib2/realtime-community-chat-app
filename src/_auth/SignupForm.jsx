@@ -15,6 +15,7 @@ function SignupForm() {
 
   const handleSignin = async (data) => {
     setError(false);
+    setErrorMessage("");
     setLoading(true);
     try {
       const user = await authService.createUser(data);
