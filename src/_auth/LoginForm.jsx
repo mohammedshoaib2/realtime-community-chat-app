@@ -12,6 +12,7 @@ function LoginForm() {
   const { handleSubmit, register } = useForm();
   const [isLoading, setLoading] = useState(false);
   const [isError, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const handleLogin = async (data) => {
     setLoading(true);
     try {
@@ -19,8 +20,9 @@ function LoginForm() {
       dispatch(login(user));
       navigate("/");
     } catch (error) {
-      dispatch(logout());
       setError(true);
+      setErrorMessage(String(error.message));
+      dispatch(logout());
     } finally {
       setLoading(false);
     }
@@ -69,7 +71,7 @@ function LoginForm() {
             Signin
           </span>
         </p>
-        {isError && <p className="text-red-500">Something Went worng</p>}
+        {isError && <p className="text-red-500 text-center">{errorMessage}</p>}
       </form>
     </div>
   );
