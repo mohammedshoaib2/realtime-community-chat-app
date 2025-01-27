@@ -14,6 +14,8 @@ function LoginForm() {
   const [isError, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const handleLogin = async (data) => {
+    setError(false);
+    setErrorMessage("");
     setLoading(true);
     try {
       const user = await authService.login(data);
