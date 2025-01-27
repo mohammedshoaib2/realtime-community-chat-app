@@ -77,12 +77,12 @@ function Home() {
     }
   };
   return (
-    <div className="w-full h-full bg-ClightGray flex justify-center items-center">
+    <div className="w-full h-[100vh] bg-ClightGray flex justify-center items-center">
       <div className="w-[800px] h-full bg-CChat flex flex-col overflow-y-scroll">
         <div className="h-[80px] bg-gray-900 flex justify-between items-center px-10">
           <div className="flex gap-5 justify-center items-center ">
             <div className=" flex justify-center items-center h-[50px] w-[50px] bg-white rounded-[100px]">
-              M
+              {String(userData.name).charAt(0)}
             </div>
             <div>
               <p className="text-white text-md">
