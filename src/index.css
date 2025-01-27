@@ -1,1 +1,35 @@
 @import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #877eff;
+}
+
+@theme {
+  --color-Cgray: #1f1f22;
+  --color-Cpurple: #877eff;
+  --color-ClightGray: #1f2029;
+  --color-CChat: #17181f;
+}
